@@ -2,13 +2,23 @@
 
 ==Usage
 
-  require 'dirge' 
+  require 'dirge'
   require_relative '../to_my_file'
+  
+Or, the much simpler notation
+
+  require ~'../to_my_file'
 
 annnd.
 
   class MyAwesomeClass
     autoload_relative :MyConstant, 'my_awesome_class/my_constant'
+  end
+
+Again, this could be 
+
+  class MyAwesomeClass
+    autoload :MyConstant, ~'my_awesome_class/my_constant'
   end
 
 All of this is powered by the new function:
