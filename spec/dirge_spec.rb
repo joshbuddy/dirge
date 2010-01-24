@@ -1,6 +1,10 @@
 describe 'Dirge' do
-  it "should resolve a path" do
+  it "should resolve a path through String#~" do
     (~'test:2test/test').should == File.expand_path(File.join(File.dirname(__FILE__), 'test:2test', 'test'))
+  end
+  
+  it "should resolve a path through File#relative" do
+    File.relative('test:2test/test').should == File.expand_path(File.join(File.dirname(__FILE__), 'test:2test', 'test'))
   end
   
   it 'should require a relative path' do

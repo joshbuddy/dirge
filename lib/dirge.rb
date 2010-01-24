@@ -32,3 +32,9 @@ class String
     end
   end
 end
+
+class File
+  def self.relative(path)
+    File.expand_path(File.join(__DIR_REL__(caller.first), path))
+  end
+end
