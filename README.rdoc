@@ -4,7 +4,7 @@
 
   require 'dirge'
   require_relative '../to_my_file'
-  
+
 Or, the much simpler notation
 
   require ~'../to_my_file'
@@ -24,3 +24,19 @@ Again, this could be
 All of this is powered by the new function:
   
   __DIR__
+  
+which takes a single line off of <tt>Kernel.caller</tt> and give you back the relative path. Calling __DIR__(caller.first) for instance, will give you the relative path to whoever called you.
+
+There is also a more explicit, and probably, more readable version.
+
+  File.relative(path)
+
+This will convert your path into a relative directory from wherever you are.
+
+  require_relative 'to/my/file'
+  
+and 
+
+  require File.relative('to/my/file')
+  
+should be identical.
