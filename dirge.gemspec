@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{dirge}
-  s.version = "0.0.3"
+  s.version = "0.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joshua Hull"]
-  s.date = %q{2009-11-21}
+  s.date = %q{2010-01-24}
   s.description = %q{Relative require, relative autoload and __DIR__}
   s.email = %q{joshbuddy@gmail.com}
   s.extra_rdoc_files = [
@@ -17,9 +17,9 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "README.rdoc",
-     "Rakefile",
-     "VERSION",
-     "lib/dirge.rb"
+    "Rakefile",
+    "VERSION",
+    "lib/dirge.rb"
   ]
   s.homepage = %q{http://github.com/joshbuddy/dirge}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.summary = %q{Relative require, relative autoload and __DIR__}
   s.test_files = [
     "spec/dirge_spec.rb",
-     "spec/test:2test/test.rb"
+    "spec/test:2test/test.rb"
   ]
 
   if s.respond_to? :specification_version then
